@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>@Human — AI Governance Platform for EU AI Act Compliance | Planet Crust</title>
+<meta name="description" content="@Human by Planet Crust is the AI governance platform for building, running and proving AI agents. Agent event logging, incident tracking, AI risk management, EU AI Act and ISO 42001 classification. Sovereign and self-hosted.">
+<link rel="canonical" href="https://www.planetcrust.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="@Human — AI Governance Platform for EU AI Act Compliance | Planet Crust">
+<meta property="og:description" content="Build, run and prove AI agents with governance by default. AI risk management, EU AI Act and ISO 42001. Sovereign, self-hosted, any LLM.">
+<meta property="og:url" content="https://www.planetcrust.com/">
+<meta property="og:site_name" content="Planet Crust">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.planetcrust.com/#org","name":"Planet Crust","url":"https://www.planetcrust.com/","foundingLocation":"Cork, Ireland","description":"European enterprise software company behind @Human, an AI governance platform, and Corteza, a secure low-code enterprise platform."},{"@type":"SoftwareApplication","name":"@Human","applicationCategory":"AI Governance Platform","operatingSystem":"Web, Self-hosted, Cloud","url":"https://www.planetcrust.com/","publisher":{"@id":"https://www.planetcrust.com/#org"},"offers":{"@type":"Offer","price":"75","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is an AI governance platform?","acceptedAnswer":{"@type":"Answer","text":"An AI governance platform lets organisations build, monitor and prove the compliance of AI agents and automations. @Human logs every agent action, tracks failures as incidents, runs AI risk management, and maps each AI system to the EU AI Act and ISO 42001."}},{"@type":"Question","name":"Does @Human support EU AI Act compliance?","acceptedAnswer":{"@type":"Answer","text":"Yes. @Human classifies AI systems as high-risk, limited-risk or prohibited, runs a fundamental rights impact assessment, maps harm scenarios to affected groups, and generates the documentation the EU AI Act requires, aligned with ISO 42001."}},{"@type":"Question","name":"Can @Human be self-hosted?","acceptedAnswer":{"@type":"Answer","text":"Yes. Self-host on your own infrastructure or run in an EU cloud region. Logs and audit records stay where you put them, with your choice of LLM including Mistral."}}]}]}</script>
+<style>
+:root{--bg:#0B1A2E;--bg2:#0E1F36;--bg3:#111F35;--surface:rgba(255,255,255,.04);--surface2:rgba(255,255,255,.06);--border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.12);--coral:#E1614C;--coral-dk:#C84E3A;--coral-soft:rgba(225,97,76,.08);--cream:#F0EBE3;--text:#E8E4DD;--text-2:rgba(232,228,221,.65);--text-3:rgba(232,228,221,.4);--blue:#3B6BA5;--mx:1140px;--g:clamp(20px,5vw,32px);--sy:clamp(76px,10vw,120px);--r:12px;--rl:18px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--text);background:var(--bg);font-size:clamp(15px,1.02vw,16.5px);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:128px 128px}
+img,svg{max-width:100%;display:block}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:2px solid var(--coral);outline-offset:3px;border-radius:4px}
+.w{width:100%;max-width:var(--mx);margin:0 auto;padding-inline:var(--g)}.sec{padding-block:var(--sy);position:relative}
+.gl{height:1px;background:linear-gradient(90deg,transparent,rgba(225,97,76,.25) 30%,rgba(59,107,165,.2) 70%,transparent);margin:0 auto;max-width:800px}
+h1,h2,h3,h4{line-height:1.12;letter-spacing:-.03em;font-weight:700;color:var(--cream);text-wrap:balance}h1{font-size:clamp(2.2rem,1.3rem+3.8vw,3.6rem);letter-spacing:-.04em;line-height:1.06}h2{font-size:clamp(1.65rem,1.05rem+2.5vw,2.6rem)}h3{font-size:clamp(1.06rem,.98rem+.32vw,1.2rem);font-weight:600}h4{font-size:.95rem;font-weight:600}
+p{max-width:68ch}.mono{font-family:'IBM Plex Mono',monospace}
+.ey{display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:16px}.ey::before{content:'';width:20px;height:1px;background:var(--coral)}
+.sub{font-size:clamp(.96rem,.88rem+.36vw,1.14rem);color:var(--text-2);line-height:1.68;max-width:58ch}
+.sh{max-width:64ch;margin-bottom:clamp(40px,5.5vw,58px)}.shc{margin-inline:auto;text-align:center}.shc .sub{margin-inline:auto}.sh .sub{margin-top:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:50px;font-weight:600;font-size:.9rem;line-height:1;border:1.5px solid transparent;cursor:pointer;transition:all .2s;white-space:nowrap;font-family:inherit}
+.bp{background:var(--coral);color:#fff;box-shadow:0 0 28px -6px rgba(225,97,76,.5),inset 0 1px 0 rgba(255,255,255,.15)}.bp:hover{background:var(--coral-dk);transform:translateY(-1px)}
+.bs{border-color:var(--border2);color:var(--cream);backdrop-filter:blur(8px);background:var(--surface)}.bs:hover{border-color:var(--coral);background:var(--coral-soft)}
+.br{display:flex;flex-wrap:wrap;gap:12px}.brc{justify-content:center}@media(max-width:420px){.btn{width:100%}}
+.ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;flex:none}.ic svg{width:20px;height:20px;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;fill:none}.ic-c{background:var(--coral-soft);border:1px solid rgba(225,97,76,.15)}.ic-c svg{stroke:var(--coral)}.ic-g{background:var(--surface2);border:1px solid var(--border)}.ic-g svg{stroke:rgba(240,235,227,.7)}.ics{width:38px;height:38px;border-radius:10px}.ics svg{width:17px;height:17px}
+.hero{padding:clamp(60px,9vw,100px) 0 clamp(72px,10vw,110px);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;width:900px;height:900px;border-radius:50%;top:-400px;right:-200px;background:radial-gradient(circle,rgba(225,97,76,.08) 0%,rgba(59,107,165,.05) 40%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;width:600px;height:600px;border-radius:50%;bottom:-300px;left:-100px;background:radial-gradient(circle,rgba(59,107,165,.06) 0%,transparent 60%);pointer-events:none}
+.hg{display:grid;gap:clamp(36px,5vw,56px);align-items:center;position:relative;z-index:1}@media(min-width:1000px){.hg{grid-template-columns:1.05fr .95fr}}
+.hero h1{margin-bottom:20px}.hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--coral),#E88A7A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .sub{margin-bottom:32px}
+.pill-soon{display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#8DC0F0;background:rgba(100,160,230,.1);border:1px solid rgba(100,160,230,.22);padding:5px 12px;border-radius:20px;margin-bottom:18px}
+.tr{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:30px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--text-3)}.tr span{display:inline-flex;align-items:center;gap:7px}.tr .d{width:5px;height:5px;border-radius:50%;background:var(--coral);flex:none;box-shadow:0 0 8px rgba(225,97,76,.5)}
+.cn{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--rl);overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.05) inset,0 0 60px -20px rgba(225,97,76,.08)}
+.cnb{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:1px solid var(--border);background:rgba(255,255,255,.02)}.cnb .dots{display:flex;gap:6px}.cnb .dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.06)}.cnb b{font-family:'IBM Plex Mono',monospace;font-size:.7rem;font-weight:500;color:var(--text-3);letter-spacing:.04em;margin-left:10px}
+.lv{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:#4FBF8A;letter-spacing:.08em}.pu{width:6px;height:6px;border-radius:50%;background:#4FBF8A;animation:pu 2s ease-in-out infinite;flex:none;box-shadow:0 0 10px rgba(79,191,138,.4)}@keyframes pu{0%,100%{opacity:1}50%{opacity:.2}}
+.lg{padding:6px 0}.lr{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px 14px;align-items:baseline;padding:9px 18px;border-bottom:1px solid rgba(255,255,255,.04);font-family:'IBM Plex Mono',monospace;font-size:.7rem;opacity:0;animation:fu .5s ease forwards}.lr:last-child{border-bottom:0}@keyframes fu{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.lr:nth-child(1){animation-delay:.12s}.lr:nth-child(2){animation-delay:.26s}.lr:nth-child(3){animation-delay:.4s}.lr:nth-child(4){animation-delay:.54s}.lr:nth-child(5){animation-delay:.68s}.lr:nth-child(6){animation-delay:.82s}.lr:nth-child(7){animation-delay:.96s}
+.lt0{color:var(--text-3);white-space:nowrap}.lm{color:var(--text-2);line-height:1.5;min-width:0;overflow-wrap:anywhere}.lm b{color:var(--cream);font-weight:600}
+.tg{font-size:.56rem;padding:3px 10px;border-radius:20px;white-space:nowrap;font-weight:600;letter-spacing:.04em;justify-self:end}.to{background:rgba(79,191,138,.12);color:#6DD4A8;border:1px solid rgba(79,191,138,.2)}.ti{background:rgba(225,97,76,.1);color:#EE9B8A;border:1px solid rgba(225,97,76,.2)}.tk{background:rgba(100,160,230,.1);color:#8DC0F0;border:1px solid rgba(100,160,230,.2)}
+.cnf{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:11px 18px;border-top:1px solid var(--border);background:rgba(255,255,255,.015);font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--text-3)}
+@media(max-width:560px){.lr{grid-template-columns:auto 1fr auto;row-gap:4px}.lm{grid-column:1/-1;order:3}}
+.los{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:28px 48px;padding:clamp(36px,5vw,52px) 0}.los .ll{font-family:'IBM Plex Mono',monospace;font-size:.64rem;color:var(--text-3);letter-spacing:.14em;text-transform:uppercase;width:100%;text-align:center;margin-bottom:6px}.lp{width:110px;height:34px;border-radius:8px;background:var(--surface);border:1px dashed var(--border);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:.56rem;color:var(--text-3)}
+.g3{display:grid;gap:clamp(14px,1.8vw,18px)}@media(min-width:640px){.g3{grid-template-columns:repeat(2,1fr)}}@media(min-width:940px){.g3{grid-template-columns:repeat(3,1fr)}}
+.g4{display:grid;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden}@media(min-width:600px){.g4{grid-template-columns:repeat(2,1fr)}}@media(min-width:1000px){.g4{grid-template-columns:repeat(4,1fr)}}
+.cd{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:clamp(24px,3vw,30px);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,box-shadow .2s}.cd:hover{border-color:var(--border2);box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}.cd .ic{margin-bottom:4px}.cd p{color:var(--text-2);font-size:.92rem}
+.fc{background:linear-gradient(135deg,var(--surface2),var(--surface));border:1px solid var(--border);border-radius:var(--r);padding:clamp(24px,3vw,30px);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,box-shadow .2s;position:relative;overflow:hidden}.fc::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent)}.fc:hover{border-color:rgba(225,97,76,.2);box-shadow:0 0 30px -10px rgba(225,97,76,.1)}.fc h3{color:var(--cream);font-size:1rem}.fc p{color:var(--text-2);font-size:.9rem;line-height:1.55}
+.stp{counter-reset:s}.st{counter-increment:s;display:grid;gap:14px 48px;padding-block:clamp(30px,3.6vw,44px);border-bottom:1px solid var(--border);align-items:start}.st:first-child{border-top:1px solid var(--border)}@media(min-width:820px){.st{grid-template-columns:200px minmax(0,1fr)}}.sn{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);font-weight:600;padding-top:5px}.st h3{font-size:clamp(1.12rem,1rem+.5vw,1.3rem);margin-bottom:8px}.st p{color:var(--text-2)}
+.sp{display:grid;gap:clamp(36px,5vw,56px);align-items:start}@media(min-width:960px){.sp{grid-template-columns:repeat(2,1fr)}}.spc{align-items:center}
+.pn{background:var(--surface);border:1px solid var(--border2);border-radius:var(--rl);overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.04) inset}.pnb{padding:13px 20px;border-bottom:1px solid var(--border);background:var(--surface2);font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--text-3)}.pbd{padding:clamp(16px,2.2vw,22px)}
+.rr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid var(--border)}.rr:last-of-type{border-bottom:0}.rr strong{display:block;font-size:.92rem;color:var(--cream);margin-bottom:2px;line-height:1.3}.rr small{display:block;color:var(--text-3);font-size:.72rem;font-family:'IBM Plex Mono',monospace}
+.pl{font-size:.64rem;padding:4px 12px;border-radius:20px;font-weight:600;white-space:nowrap}.ph{background:rgba(225,97,76,.1);color:#EE9B8A;border:1px solid rgba(225,97,76,.18)}.plo{background:var(--surface2);color:var(--text-2);border:1px solid var(--border)}.plk{background:rgba(79,191,138,.1);color:#6DD4A8;border:1px solid rgba(79,191,138,.18)}
+.gp{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}.ch{font-family:'IBM Plex Mono',monospace;font-size:.66rem;padding:4px 11px;border:1px solid var(--border);border-radius:20px;color:var(--text-3)}
+.co{border-left:2px solid var(--coral);background:var(--coral-soft);padding:20px 24px;border-radius:0 var(--r) var(--r) 0;margin-top:28px}.co strong{display:block;margin-bottom:6px;color:var(--cream)}.co p{color:var(--text-2);font-size:.93rem;max-width:none}
+.sc{background:var(--bg2);padding:clamp(24px,3vw,30px) clamp(20px,2.4vw,24px);transition:background .2s}.sc:hover{background:var(--bg3)}.sc .ic{margin-bottom:16px}.sc h3{margin-bottom:7px}.sc p{color:var(--text-2);font-size:.9rem;max-width:none}
+.sts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}@media(min-width:700px){.sts{grid-template-columns:repeat(4,1fr)}}.stc{background:var(--bg2);padding:clamp(20px,2.6vw,26px) clamp(18px,2.2vw,22px)}.stc b{display:block;font-size:clamp(1.25rem,1rem+.9vw,1.5rem);color:var(--cream);margin-bottom:3px;letter-spacing:-.02em}.stc span{font-size:.78rem;color:var(--text-3);line-height:1.4;display:block}
+.pt{font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);font-weight:600}
+.iph{background:var(--surface);border:1px dashed var(--border2);border-radius:var(--rl);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;min-height:280px;padding:24px;text-align:center}.iph svg{width:40px;height:40px;stroke:var(--text-3);fill:none;stroke-width:1.4}.iph span{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--text-3);max-width:32ch}
+.pg{display:grid;gap:clamp(14px,1.8vw,18px)}@media(min-width:640px){.pg{grid-template-columns:repeat(2,1fr)}}@media(min-width:940px){.pg{grid-template-columns:repeat(3,1fr)}}
+.pc{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;transition:border-color .2s}.pc:hover{border-color:var(--border2)}.pc.ft{border-color:var(--coral);box-shadow:0 0 40px -12px rgba(225,97,76,.2)}.pct{padding:clamp(22px,2.8vw,28px) clamp(20px,2.4vw,24px);border-bottom:1px solid var(--border)}.pc.ft .pct{background:linear-gradient(135deg,var(--coral),var(--coral-dk));border-bottom-color:var(--coral-dk)}.pc.ft .pct h3,.pc.ft .pct .sp0{color:#fff}.pct h3{font-size:1.12rem;margin-bottom:4px}.sp0{font-family:'IBM Plex Mono',monospace;font-size:.66rem;color:var(--text-3)}.pcb{padding:clamp(20px,2.6vw,26px) clamp(20px,2.4vw,24px)}.pa{font-size:clamp(1.5rem,1.2rem+.9vw,1.8rem);font-weight:800;color:var(--cream);letter-spacing:-.03em}.pa .cu{font-size:.82em;font-weight:500;color:var(--text-3)}.pp{font-size:.82rem;color:var(--text-3);margin-top:3px}.pal{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--text-3);margin-top:12px;line-height:1.7}.pin{margin-top:18px;font-size:.82rem;color:var(--text-2);line-height:1.6}.pin b{color:var(--text-3);font-weight:600;display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.fq{max-width:840px;margin:0 auto;display:grid;gap:10px}.fi{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:clamp(22px,2.8vw,28px);transition:border-color .2s}.fi:hover{border-color:var(--border2)}.fi h3{margin-bottom:8px;font-size:clamp(.98rem,.92rem+.26vw,1.06rem);color:var(--cream)}.fi p{color:var(--text-2);font-size:.93rem;max-width:none}
+.cta-sec{position:relative;overflow:hidden}.cta-sec::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(225,97,76,.1) 0%,rgba(59,107,165,.05) 40%,transparent 65%);pointer-events:none}.fn{max-width:60ch;margin:0 auto;text-align:center;position:relative;z-index:1}.fn h2{margin-bottom:16px}.fn .sub{margin:0 auto 30px}.fnn{margin-top:20px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--text-3)}
+.corteza{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--rl);padding:clamp(28px,4vw,44px);position:relative;overflow:hidden}
+.corteza::before{content:'';position:absolute;top:0;right:0;width:340px;height:340px;background:radial-gradient(circle,rgba(59,107,165,.1),transparent 70%);pointer-events:none}
+.cz-tag{display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#6DD4A8;background:rgba(79,191,138,.1);border:1px solid rgba(79,191,138,.22);padding:5px 12px;border-radius:20px;margin-bottom:16px}
+.cz-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.cz-b{font-family:'IBM Plex Mono',monospace;font-size:.68rem;padding:6px 13px;border:1px solid var(--border2);border-radius:20px;color:var(--text-2);background:var(--surface)}
+.mb{background:rgba(225,97,76,.06);border-bottom:1px solid rgba(225,97,76,.12);color:var(--coral);text-align:center;padding:10px var(--g);font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.04em}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.lr{opacity:1}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<p class="mb">DRAFT MOCKUP — internal review only. Product visuals are placeholders.</p>
+
+<!-- HERO -->
+<section class="hero"><div class="w hg">
+<div>
+<span class="ey">Planet Crust · @Human</span>
+<h1>The <em>AI governance platform</em> for EU&nbsp;AI&nbsp;Act compliance.</h1>
+<p class="sub">Build, run and prove your AI agents and automations. Full agent event logging, AI risk management, incident tracking and real-time alerting. Every AI system classified against the EU AI Act and ISO 42001. Sovereign, self-hosted, under your control.</p>
+<div class="br"><a href="#book" class="btn bp">Book a governance walkthrough</a><a href="#corteza" class="btn bs">Building enterprise systems today</a></div>
+<div class="tr"><span><i class="d"></i>EU AI Act &amp; ISO 42001</span><span><i class="d"></i>AI risk management</span><span><i class="d"></i>Self-hosted or EU cloud</span><span><i class="d"></i>Any LLM, incl. Mistral</span></div>
+</div>
+<div class="cn">
+<div class="cnb"><span class="dots"><i></i><i></i><i></i></span><b>@human · governance event log</b><span class="lv"><i class="pu"></i>RECORDING</span></div>
+<div class="lg">
+<div class="lr"><span class="lt0">09:14:02</span><span class="lm"><b>agent.claims-triage</b> activated by m.rossi</span><span class="tg to">logged</span></div>
+<div class="lr"><span class="lt0">09:14:37</span><span class="lm"><b>config.changed</b> model endpoint updated</span><span class="tg to">logged</span></div>
+<div class="lr"><span class="lt0">09:16:11</span><span class="lm"><b>term.blocked</b> restricted phrase withheld</span><span class="tg tk">guardrail</span></div>
+<div class="lr"><span class="lt0">09:22:48</span><span class="lm"><b>automation.failed</b> invoice-sync step 3 timeout</span><span class="tg ti">incident</span></div>
+<div class="lr"><span class="lt0">09:23:00</span><span class="lm"><b>incident.assigned</b> owner: platform-ops</span><span class="tg to">tracked</span></div>
+<div class="lr"><span class="lt0">09:31:26</span><span class="lm"><b>volume.spike</b> logins x100 in 60s window</span><span class="tg ti">alert</span></div>
+<div class="lr"><span class="lt0">09:40:09</span><span class="lm"><b>system.hr-screening</b> classified high-risk</span><span class="tg tk">Annex III</span></div>
+</div>
+<div class="cnf"><span>7 events · retained in your infrastructure</span><span>EU AI Act audit export ready</span></div>
+</div>
+</div></section>
+
+<div class="gl"></div>
+
+<!-- LOGOS -->
+<section class="w"><div class="los">
+<span class="ll">Trusted by organisations building secure enterprise systems</span>
+<div class="lp">Cisco</div><div class="lp">KBR</div><div class="lp">Logo 3</div><div class="lp">Logo 4</div><div class="lp">Logo 5</div>
+</div></section>
+
+<div class="gl"></div>
+
+<!-- PROBLEM -->
+<section class="sec"><div class="w">
+<div class="sh"><span class="ey">The problem</span><h2>Your AI agents are already running. Can you prove what they did?</h2><p class="sub">AI agents are making decisions inside your business right now. Screening applicants, routing claims, answering customers, moving data. Most organisations cannot say what those agents did, which touched personal data, or what happened when an automation failed silently.</p></div>
+<div class="g3">
+<div class="cd"><div class="ic ic-c ics"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/><line x1="1" y1="1" x2="23" y2="23"/></svg></div><h3>No visibility</h3><p>Agents run, configurations change, conversations happen. Nobody sees it until something breaks.</p></div>
+<div class="cd"><div class="ic ic-c ics"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div><h3>No evidence</h3><p>EU AI Act and ISO 42001 documentation assembled by hand, after the fact, in the week the auditor arrives.</p></div>
+<div class="cd"><div class="ic ic-c ics"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h3>No control</h3><p>Nothing stops an agent doing something it shouldn't. You find out afterwards, from someone else.</p></div>
+</div>
+</div></section>
+
+<div class="gl"></div>
+
+<!-- HOW IT WORKS -->
+<section class="sec"><div class="w">
+<div class="sh"><span class="ey">How it works</span><h2>Build it. Govern it. Prove it.</h2><p class="sub">@Human is the AI governance platform where you build AI systems inside the governed environment. Governance is built in, with guard rails, not bolted on afterwards.</p></div>
+<div class="stp">
+<div class="st"><span class="sn">Build</span><div><h3>Create AI agents inside a governed environment</h3><p>Build agents, automations, chatbots and data models within defined behavioural guard rails. Change management is tracked on every revision, so what you build is compliant by construction.</p></div></div>
+<div class="st"><span class="sn">Govern</span><div><h3>Every AI agent action recorded as it happens</h3><p>Set alerts on configuration changes, conversation spikes or blacklisted terms. A failed automation becomes a tracked incident with an owner, not a silent error in a log file.</p></div></div>
+<div class="st"><span class="sn">Prove</span><div><h3>Report EU AI Act and ISO 42001 compliance from records</h3><p>Group agents into defined AI systems, run a fundamental rights impact assessment, classify the risk, and generate the documentation regulators require from evidence captured automatically.</p></div></div>
+</div>
+</div></section>
+
+<div class="gl"></div>
+
+<!-- PRODUCT VIDEO -->
+<section class="sec"><div class="w">
+<div class="sh shc"><span class="ey">Inside @Human</span><h2>See how AI governance actually works</h2><p class="sub">A governed workspace for AI agents, automations and enterprise applications. Everything you build is logged, classified and auditable from the moment it runs.</p></div>
+<div class="iph" style="min-height:420px"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg><span>Product video placeholder. Embed a 60-90 second walkthrough: building an agent, the event log filling in, a risk classification. This is the "show the inner features" visual Niall asked for.</span></div>
+</div></section>
+
+<div class="gl"></div>
+
+<!-- FEATURES -->
+<section class="sec"><div class="w">
+<div class="sh"><span class="ey">AI agent governance</span><h2>Every AI agent action, on the record</h2><p class="sub">@Human applies a security-operations approach to AI governance. If you have run a SIEM, this will feel familiar, except the events are agent decisions, configuration changes and conversations.</p></div>
+<div class="g3">
+<div class="fc"><div class="ic ic-g"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div><h3>Full agent event logging</h3><p>Every agent activation, deactivation and configuration change, with who and when.</p></div>
+<div class="fc"><div class="ic ic-g"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Conversation monitoring</h3><p>See what agents and AI assistants actually said, in full, at runtime.</p></div>
+<div class="fc"><div class="ic ic-g"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div><h3>Guard rails &amp; keyword controls</h3><p>Blacklist terms and set behavioural limits so agents never cross the line you set.</p></div>
+<div class="fc"><div class="ic ic-g"><svg viewBox="0 0 24 24"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><h3>Incident tracking</h3><p>A failed automation is an incident with a status and an owner, not a lost error.</p></div>
+<div class="fc"><div class="ic ic-g"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div><h3>Real-time alerting</h3><p>Trigger on single events, cumulative counts in a time window, or strict sequence patterns.</p></div>
+<div class="fc"><div class="ic ic-g"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Change management</h3><p>Every project revision tracked, with active versions and drafts managed side by side.</p></div>
+</div>
+</div></section>
+
+<div class="gl"></div>
+
+<!-- EU AI ACT + ISO 42001 -->
+<section class="sec"><div class="w sp">
+<div>
+<span class="ey">EU AI Act &amp; ISO 42001</span><h2>Built for the regulation, aligned to the standard</h2>
+<p class="sub" style="margin-top:16px">Define your AI systems, including the connected infrastructure the Act brings into scope. A fundamental rights impact assessment drives the risk classification: high-risk, limited-risk or prohibited. Map the harm scenarios, the operational triggers, and the groups those harms would fall on.</p>
+<p class="sub">Systems that touch hiring, credit, healthcare or public services are high-risk by default under Annex III. @Human generates that reporting from records it already holds, aligned to ISO 42001, the international standard for AI management systems.</p>
+<div class="co"><strong>Who does it protect?</strong><p>Applicants filtered by a screening model. Patients triaged by an AI assistant. Children affected by content recommendations. Older adults dependent on automated care decisions. Ethnic and racial minorities assessed by algorithmic systems. The EU AI Act exists because these decisions have consequences, and someone has to be accountable.</p></div>
+</div>
+<div class="pn">
+<div class="pnb">@human · risk register · AI systems in scope</div>
+<div class="pbd">
+<div class="rr"><div><strong>HR candidate screening</strong><small>Annex III · employment</small></div><span class="pl ph">High-risk</span></div>
+<div class="rr"><div><strong>Claims triage assistant</strong><small>insurance · human-in-the-loop</small></div><span class="pl ph">High-risk</span></div>
+<div class="rr"><div><strong>Internal knowledge assistant</strong><small>staff-facing · no personal data</small></div><span class="pl plo">Limited-risk</span></div>
+<div class="rr"><div><strong>Finance operations sync</strong><small>ISO 42001 documented</small></div><span class="pl plk">Documented</span></div>
+<div class="gp"><span class="ch">applicants</span><span class="ch">children</span><span class="ch">older adults</span><span class="ch">minorities</span><span class="ch">patients</span></div>
+</div>
+</div>
+</div></section>
+
+<div class="gl"></div>
+
+<!-- SOVEREIGNTY -->
+<section class="sec"><div class="w">
+<div class="sh"><span class="ey">Sovereign AI</span><h2>Your infrastructure. Your model. Your data.</h2><p class="sub">@Human gives you control over the parts of the AI stack that matter most for a regulated, sovereign deployment.</p></div>
+<div class="g4">
+<div class="sc"><div class="ic ic-c"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="8" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/></svg></div><h3>Self-host or EU cloud</h3><p>Run @Human on your own infrastructure or in your chosen EU region. Logs and audit records stay where you put them.</p></div>
+<div class="sc"><div class="ic ic-c"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></div><h3>Any LLM</h3><p>Choose your LLM vendor, including EU providers such as Mistral, or host your own models. No lock-in.</p></div>
+<div class="sc"><div class="ic ic-c"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Integrated security</h3><p>Role-based access control, data governance and human-in-the-loop steps that hold at runtime.</p></div>
+<div class="sc"><div class="ic ic-c"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6z"/></svg></div><h3>Data governance</h3><p>Sensitive data stays where you need it, with oversight that stands up to audit and inspection.</p></div>
+</div>
+</div></section>
+
+<div class="gl"></div>
+
+<!-- CORTEZA — AVAILABLE NOW -->
+<section class="sec" id="corteza"><div class="w">
+<div class="corteza">
+<span class="cz-tag"><span class="pu" style="background:#6DD4A8"></span>Available today</span>
+<div class="sp spc" style="gap:clamp(28px,4vw,48px)">
+<div>
+<h2 style="font-size:clamp(1.4rem,1rem+1.8vw,2rem)">Corteza: build enterprise systems safely, today</h2>
+<p class="sub" style="margin-top:14px">While @Human brings governance to AI, Corteza is our proven platform for building enterprise applications with guard rails and integrated security. In production since 2019 and used by organisations worldwide, Corteza is how we learned to build systems people can trust. Available now, with enterprise support and implementation services.</p>
+<div class="cz-badges"><span class="cz-b">Build safely</span><span class="cz-b">Guard rails</span><span class="cz-b">Low-code</span><span class="cz-b">Integrated security</span><span class="cz-b">In production since 2019</span></div>
+<div class="br" style="margin-top:24px"><a href="mailto:sales@planetcrust.com" class="btn bp">Talk to us about Corteza</a><a href="https://cortezaproject.org" class="btn bs">Explore Corteza</a></div>
+</div>
+<div class="sts" style="grid-template-columns:repeat(2,1fr)"><div class="stc"><b>2019</b><span>In production</span></div><div class="stc"><b>Global</b><span>Enterprise deployments</span></div><div class="stc"><b>Secure</b><span>By design, not addition</span></div><div class="stc"><b>Cork, IE</b><span>European company</span></div></div>
+</div>
+</div>
+</div></section>
+
+<div class="gl"></div>
+
+<!-- WHO IT'S FOR -->
+<section class="sec"><div class="w">
+<div class="sh"><span class="ey">Who it's for</span><h2>Built for the people who carry the risk</h2></div>
+<div class="g3">
+<div class="cd"><div class="ic ic-c"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><span class="pt">Compliance &amp; risk</span><h3>Prove it, don't assert it</h3><p>Documented oversight, logged decisions and EU AI Act reporting that traces back to real records, not a spreadsheet assembled the week before an audit.</p></div>
+<div class="cd"><div class="ic ic-c"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><span class="pt">IT &amp; platform</span><h3>Accountable for what runs</h3><p>Full visibility of AI agents in production, incident tracking when automations fail, and controls that hold at runtime.</p></div>
+<div class="cd"><div class="ic ic-c"><svg viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg></div><span class="pt">Public sector &amp; regulated</span><h3>Sovereignty as a condition</h3><p>Self-hosted and EU-based, with an audit trail that stands up to procurement and inspection.</p></div>
+</div>
+</div></section>
+
+<div class="gl"></div>
+
+<!-- PRICING -->
+<section class="sec"><div class="w">
+<div class="sh shc"><span class="ey">Pricing</span><h2>Enterprise AI without enterprise pricing</h2><p class="sub">Every plan includes unlimited users, agents, automations, connections and applications. You pay for infrastructure, not headcount.</p></div>
+<div class="pg">
+<div class="pc"><div class="pct"><h3>@Human Small</h3><span class="sp0">2 CPU · 4 GB RAM · 60 GB</span></div><div class="pcb"><div class="pa"><span class="cu">€</span>75 <span class="cu">/ $105</span></div><div class="pp">per month</div><div class="pal">€3 / $4.50 per day<br>€21 / $32.50 per week</div><div class="pin"><b>Best for</b>Evaluation, pilots, small teams</div></div></div>
+<div class="pc ft"><div class="pct"><h3>@Human Medium</h3><span class="sp0">4 CPU · 8 GB RAM · 100 GB</span></div><div class="pcb"><div class="pa"><span class="cu">€</span>110 <span class="cu">/ $165</span></div><div class="pp">per month</div><div class="pal">Monthly billing</div><div class="pin"><b>Best for</b>Production agents, multiple governed AI systems</div></div></div>
+<div class="pc"><div class="pct"><h3>@Human Large</h3><span class="sp0">8 CPU · 16 GB RAM · 200 GB</span></div><div class="pcb"><div class="pa"><span class="cu">€</span>225 <span class="cu">/ $330</span></div><div class="pp">per month</div><div class="pal">Monthly billing</div><div class="pin"><b>Best for</b>Organisation-wide governance, regulated workloads</div></div></div>
+</div>
+<div style="text-align:center;margin-top:26px"><p style="font-size:.88rem;color:var(--text-3)">Enterprise support and project implementation available. <a href="mailto:sales@planetcrust.com" style="color:var(--coral);font-weight:600">Contact sales@planetcrust.com</a></p></div>
+</div></section>
+
+<div class="gl"></div>
+
+<!-- FAQ -->
+<section class="sec"><div class="w">
+<div class="sh shc"><span class="ey">FAQ</span><h2>AI governance, answered</h2></div>
+<div class="fq">
+<div class="fi"><h3>What is an AI governance platform?</h3><p>An AI governance platform lets an organisation build, monitor and prove the compliance of its AI agents and automations. @Human logs every agent action, tracks failures as incidents, runs AI risk management, and maps each AI system to the EU AI Act and ISO 42001, so compliance is demonstrable rather than assumed.</p></div>
+<div class="fi"><h3>Does @Human support EU AI Act compliance?</h3><p>@Human classifies AI systems as high-risk, limited-risk or prohibited, runs a fundamental rights impact assessment, maps harm scenarios to affected groups, and generates the documentation the Act requires, aligned to the ISO 42001 AI management standard.</p></div>
+<div class="fi"><h3>How does @Human relate to Corteza?</h3><p>Corteza is Planet Crust's platform for building enterprise applications safely, in production since 2019 and available today. @Human is our AI governance platform. Both are built on the same principle: systems that are safe by design, with guard rails and integrated security.</p></div>
+<div class="fi"><h3>Can @Human be self-hosted for data sovereignty?</h3><p>Yes. @Human can be self-hosted on your own infrastructure or run in an EU cloud region. Your logs, audit records and sensitive data stay where you put them, with your choice of LLM including Mistral.</p></div>
+</div>
+</div></section>
+
+<!-- FINAL CTA -->
+<section class="sec cta-sec" id="book"><div class="w fn">
+<span class="ey">Next step</span>
+<h2>See @Human against your own AI systems</h2>
+<p class="sub" style="color:var(--text-2)">A 20-minute walkthrough. Bring one AI system you are unsure about. We will show you how it would be classified, logged and reported for EU AI Act compliance inside @Human.</p>
+<div class="br brc"><a href="#" class="btn bp">Book a governance walkthrough</a><a href="mailto:sales@planetcrust.com" class="btn bs">Talk to sales</a></div>
+<p class="fnn">No obligation · No sales deck · Bring a real use case</p>
+</div></section>
+
+</body>
+</html>
